@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <title>Реєстрація — TodoList</title>
+    <!-- Підключення стилів для реєстрації -->
+    <link rel="stylesheet" href="../css/register.css" />
+    <!-- Підключення шрифту Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Фон з частинками -->
+    <div id="particles-js"></div>
+
+    <!-- Хедер -->
+    <header>
+        <div class="logo">
+            <img src="../img/logo.png" alt="Логотип TodoList">
+            <span class="logo-text">TodoList</span>
+        </div>
+        <nav>
+            <a href="login.html">Авторизація</a>
+            <a href="register.html">Реєстрація</a>
+            <a href="../index.html">Головна</a>
+        </nav>
+    </header>
+
+    <!-- Основний контент -->
+    <main>
+        <div class="register-container fade-in">
+            <h2>Реєстрація</h2>
+            <form id="registerForm">
+                <div class="input-group">
+                    <label for="regUsername">Username</label>
+                    <input type="text" id="regUsername" required />
+                </div>
+                <div class="input-group">
+                    <label for="regEmail">Email</label>
+                    <input type="email" id="regEmail" required />
+                </div>
+                <div class="input-group">
+                    <label for="regPassword">Password</label>
+                    <input type="password" id="regPassword" required />
+                </div>
+                <button type="submit" class="btn-register">Зареєструватися</button>
+            </form>
+            <div class="extra-link">
+                <a href="login.html">Вже є акаунт?</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Футер -->
+    <footer>
+        <p>&copy; 2025 TodoList. Усі права захищені.</p>
+        <p>Цей сайт не передає ваші дані третім особам і дотримується політики конфіденційності.</p>
+    </footer>
+
+    <!-- Підключення скриптів -->
+    <script src="../js/particles.js"></script>
+    <script src="../js/register.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+</html>

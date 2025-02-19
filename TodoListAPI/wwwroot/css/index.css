@@ -1,0 +1,512 @@
+﻿:root {
+    --color-bg: #1e1e2f;
+    --color-bg-secondary: #2d2d44;
+    --color-text: #ffffff;
+    --color-subtext: #cccccc;
+    --color-primary: #7f5af0;
+    --color-accent: #2cb67d;
+}
+
+/* GLOBAL RESET & BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    background: var(--color-bg);
+    color: var(--color-text);
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* HEADER STYLES */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: rgba(0,0,0,0.4);
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+header .logo img {
+    height: 48px;
+}
+
+header .logo .logo-text {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--color-text);
+    line-height: 1;
+}
+
+header nav a {
+    color: var(--color-text);
+    text-decoration: none;
+    margin-left: 1.5rem;
+    transition: color 0.2s;
+}
+
+header nav a:hover {
+    color: var(--color-accent);
+}
+
+/* HERO SECTION */
+.hero {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    padding: 3rem 1rem; /* чуть увеличили отступ сверху/снизу */
+}
+
+.hero-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.hero-left {
+    flex: 1 1 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.hero-img {
+    max-width: 80%;
+    border-radius: 8px;
+}
+
+.hero-gif {
+    max-width: 80%;
+    border: 3px solid var(--color-primary);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+}
+
+.hero-right {
+    flex: 1 1 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-right h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--color-primary);
+}
+
+.hero-right p {
+    font-size: 1.2rem;
+    max-width: 500px;
+    margin-bottom: 1.5rem;
+    color: var(--color-subtext);
+}
+
+.buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.2rem;
+    border-radius: 4px;
+    background: var(--color-primary);
+    color: #fff;
+    text-decoration: none;
+    transition: transform 0.2s, background 0.2s;
+    font-weight: 500;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    background: #6a48d4;
+}
+
+.btn-accent {
+    background: var(--color-accent);
+}
+
+.btn-accent:hover {
+    background: #249e68;
+}
+
+/* ABOUT SECTION */
+.about {
+    background: var(--color-bg-secondary);
+    padding: 4rem 2rem; /* увеличили отступы */
+    text-align: left; /* выравнивание слева */
+}
+
+.about h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-accent);
+}
+
+.about p {
+    max-width: 700px;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+/* FEATURES SECTION */
+.features {
+    background: var(--color-bg);
+    padding: 4rem 2rem;
+    text-align: left;
+    color: var(--color-text);
+}
+
+.features h2 {
+    font-size: 2rem;
+    color: var(--color-accent);
+    margin-bottom: 1.5rem;
+}
+
+.features-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.features-left {
+    flex: 1 1 400px;
+}
+
+.features-left ul {
+    margin-top: 1rem;
+    list-style: disc;
+    padding-left: 1.5rem;
+    line-height: 1.8;
+}
+
+.features-right {
+    flex: 1 1 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.features-right img {
+    max-width: 80%;
+    border-radius: 8px;
+    border: 2px solid var(--color-primary);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+}
+
+/* TEAM SECTION */
+.team {
+    background: var(--color-bg-secondary);
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.team h2 {
+    font-size: 2rem;
+    color: var(--color-accent);
+    margin-bottom: 1.5rem;
+}
+
+.team-members {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.team-member {
+    background: #1e1e2f;
+    padding: 1.5rem;
+    border-radius: 8px;
+    width: 250px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    text-align: center;
+}
+
+.team-member img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    object-fit: cover;
+    border: 2px solid var(--color-accent);
+}
+
+.team-member h3 {
+    margin-bottom: 0.5rem;
+    color: var(--color-primary);
+}
+
+.team-member p {
+    color: var(--color-subtext);
+    font-size: 0.9rem;
+}
+
+/* FAQ SECTION */
+.faq {
+    background: var(--color-bg);
+    padding: 4rem 2rem;
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq h2 {
+    font-size: 2rem;
+    color: var(--color-accent);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.faq-item {
+    margin-bottom: 2rem;
+}
+
+.faq-item h3 {
+    font-size: 1.2rem;
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.faq-item p {
+    line-height: 1.6;
+    color: var(--color-subtext);
+}
+
+/* CONTACT SECTION */
+.contact {
+    padding: 4rem 2rem;
+    text-align: left; /* немного отличаемся от центра */
+}
+
+.contact h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-accent);
+    text-align: center;
+}
+
+.contact p {
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    line-height: 1.6;
+    color: var(--color-subtext);
+    text-align: center;
+}
+
+.contact .contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* выравнивание слева */
+    max-width: 600px;
+    margin: 0 auto;
+    gap: 0.5rem;
+}
+
+.contact .contact-info strong {
+    color: var(--color-primary);
+}
+
+.contact .contact-info a {
+    color: var(--color-accent);
+    text-decoration: none;
+}
+
+.contact .contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* FOOTER STYLES */
+footer {
+    background: #151525;
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+    color: var(--color-subtext);
+}
+
+    footer p {
+        margin-bottom: 0.5rem;
+    }
+
+/* ADDITIONAL ANIMATIONS */
+.fade-in-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: fadeInLeft 1s forwards;
+}
+
+@keyframes fadeInLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.fade-in-right {
+    opacity: 0;
+    transform: translateX(50px);
+    animation: fadeInRight 1s forwards;
+}
+
+@keyframes fadeInRight {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
+
+
+/* ABOUT SECTION */
+.about {
+    background: var(--color-bg-secondary);
+    padding: 4rem 2rem;
+    /* Вся секция по центру */
+    text-align: center;
+}
+
+/* Дополнительный контейнер, чтобы текст был левее */
+.about .about-content {
+    max-width: 800px;
+    margin: 0 auto; /* центрируем сам контейнер */
+    text-align: left; /* внутри - выравнивание слева */
+    line-height: 1.6;
+}
+
+.about h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-accent);
+    text-align: center; /* заголовок по центру */
+}
+
+.about p {
+    margin-bottom: 1.5rem;
+    color: var(--color-subtext);
+}
+
+/* FAQ + SEPARATOR */
+.faq {
+    background: var(--color-bg);
+    padding: 4rem 2rem;
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+    border-bottom: 1px solid #444; /* Горизонтальная линия снизу, разделяющая FAQ и Contacts */
+    margin-bottom: 2rem; /* Отступ после линии */
+}
+
+.faq h2 {
+    font-size: 2rem;
+    color: var(--color-accent);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.faq-item {
+    margin-bottom: 2rem;
+}
+
+.faq-item h3 {
+    font-size: 1.2rem;
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.faq-item p {
+    line-height: 1.6;
+    color: var(--color-subtext);
+}
+
+/* CONTACT SECTION */
+.contact {
+    padding: 4rem 2rem;
+    text-align: left;
+}
+
+.contact h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-accent);
+    text-align: center;
+}
+
+.contact p {
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    line-height: 1.6;
+    color: var(--color-subtext);
+    text-align: center;
+}
+
+.contact .contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 600px;
+    margin: 0 auto;
+    gap: 0.5rem;
+}
+
+.contact .contact-info strong {
+    color: var(--color-primary);
+}
+
+.contact .contact-info a {
+    color: var(--color-accent);
+    text-decoration: none;
+}
+
+.contact .contact-info a:hover {
+    text-decoration: underline;
+}

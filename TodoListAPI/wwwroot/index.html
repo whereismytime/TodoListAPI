@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <title>Головна — TodoList</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="particles-js"></div>
+
+    <header>
+        <div class="logo">
+            <img src="img/logo.png" alt="Логотип TodoList" />
+            <span class="logo-text">TodoList</span>
+        </div>
+        <nav>
+            <a href="pages/login.html">Авторизація</a>
+            <a href="pages/register.html">Реєстрація</a>
+            <a href="#about">Про нас</a>
+            <a href="#features">Функції</a>
+            <a href="#team">Команда</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contact">Контакти</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero-секція -->
+        <section class="hero">
+            <div class="hero-content fade-in">
+                <div class="hero-left">
+                    <img src="" alt="" class="hero-img" />
+                    <img src="img/todotest.gif" alt="Демонстрація роботи Todo" class="hero-gif" />
+                </div>
+                <div class="hero-right">
+                    <h1>Ласкаво просимо до TodoList!</h1>
+                    <p>
+                        Керуйте завданнями легко та ефективно. Зберігайте ідеї, плануйте справи, ставте цілі — усе в одному місці.
+                    </p>
+                    <div class="buttons">
+                        <a href="pages/login.html" class="btn">Авторизація</a>
+                        <a href="pages/register.html" class="btn btn-accent">Реєстрація</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Про нас -->
+        <section id="about" class="about fade-in">
+            <div class="about-content">
+                <h2>Про нас</h2>
+                <p>
+                    Ми створили цей сервіс, щоб допомогти людям впорядкувати повсякденні завдання і досягати цілей.
+                    Наша команда прагне зробити ваш робочий процес простішим та продуктивнішим.
+                </p>
+                <p>
+                    Створюйте списки, відмічайте виконання, відстежуйте прогрес — усе доступне з будь-якого пристрою.
+                    Ми цінуємо ваш відгук і постійно працюємо над покращенням сервісу.
+                </p>
+            </div>
+        </section>
+
+        <!-- НОВАЯ СЕКЦИЯ: Функції (Features) -->
+        <section id="features" class="features fade-in-left">
+            <div class="features-content">
+                <div class="features-left">
+                    <h2>Основні можливості</h2>
+                    <ul>
+                        <li>Створення списків завдань</li>
+                        <li>Редагування та видалення завдань</li>
+                        <li>Відмітка виконаних пунктів</li>
+                        <li>Сортування за алфавітом</li>
+                        <li>Безпечна авторизація та збереження даних</li>
+                    </ul>
+                </div>
+                <div class="features-right">
+                    <img src="img/features.png" alt="Функції" />
+                </div>
+            </div>
+        </section>
+
+        <!-- НОВАЯ СЕКЦИЯ: Команда (Team) -->
+        <section id="team" class="team fade-in-right">
+            <h2>Наша команда</h2>
+            <div class="team-members">
+                <div class="team-member">
+                    <img src="img/team1.png" alt="Учасник 1" /> 
+                    <h3>Олександр</h3>
+                    <p>Frontend-розробник</p>
+                </div>
+                <div class="team-member">
+                    <img src="img/team2.png" alt="Учасник 2" />
+                    <h3>Марія</h3>
+                    <p>Backend-розробник</p>
+                </div>
+                <div class="team-member">
+                    <img src="img/team3.png" alt="Учасник 3" />
+                    <h3>Іван</h3>
+                    <p>UI/UX дизайнер</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- НОВАЯ СЕКЦИЯ: FAQ -->
+        <section id="faq" class="faq fade-in">
+            <h2>Часті питання (FAQ)</h2>
+            <div class="faq-item">
+                <h3>1. Як зареєструватися?</h3>
+                <p>Перейдіть на сторінку "Реєстрація", заповніть форму та натисніть "Зареєструватися". Після цього ви зможете увійти у свій акаунт.</p>
+            </div>
+            <div class="faq-item">
+                <h3>2. Як додати нове завдання?</h3>
+                <p>У вашому особистому кабінеті перейдіть до сторінки "Todo" та натисніть кнопку "Додати". Введіть назву та збережіть.</p>
+            </div>
+            <div class="faq-item">
+                <h3>3. Чи зберігаються дані після виходу?</h3>
+                <p>Так, усі ваші завдання зберігаються на сервері та будуть доступні після повторного входу.</p>
+            </div>
+            <div class="faq-item">
+                <h3>4. Як змінити пароль?</h3>
+                <p>Наразі зміна пароля недоступна. Зверніться до підтримки, якщо виникли питання.</p>
+            </div>
+        </section>
+
+        <!-- Контакти -->
+        <section id="contact" class="contact fade-in">
+            <h2>Контакти</h2>
+            <p>Якщо у вас є питання чи пропозиції, зв'яжіться з нами:</p>
+            <div class="contact-info">
+                <div><strong>Електронна пошта:</strong> <a href="mailto:info@todolist.com">info@todolist.com</a></div>
+                <div><strong>Телефон:</strong> +380 (99) 123-45-67</div>
+                <div><strong>Адреса:</strong> 01001, Україна, м. Київ, вул. Завдань, 5</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 TodoList. Усі права захищені.</p>
+        <p>Цей сайт не передає ваші дані третім особам і дотримується політики конфіденційності.</p>
+    </footer>
+
+    <script src="js/particles.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <title>Мої завдання — TodoList</title>
+    <link rel="stylesheet" href="../css/todo.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Фон с частицами -->
+    <div id="particles-js"></div>
+
+    <!-- Шапка -->
+    <header>
+        <div class="logo">
+            <img src="../img/logo.png" alt="Логотип TodoList">
+            <span class="logo-text">TodoList</span>
+        </div>
+        <nav>
+            <span id="usernameLabel" class="username-animated"></span>
+            <a href="#" id="logoutLink">Вийти</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="todo-container fade-in">
+            <h2>Список завдань для <span id="usernameSpan"></span></h2>
+
+            <div class="todo-form">
+                <input type="text" id="todoTitle" placeholder="Нове завдання..." maxlength="100" />
+                <button id="createTodoBtn" class="btn">Додати</button>
+            </div>
+
+            <div class="buttons-row">
+                <button id="loadTodosBtn" class="btn">Завантажити завдання</button>
+                <button id="sortAZBtn" class="btn">A–Z</button>
+                <button id="sortZABtn" class="btn">Z–A</button>
+            </div>
+
+            <ul id="todoList"></ul>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 TodoList. Усі права захищені.</p>
+        <p>Цей сайт не передає ваші дані третім особам і дотримується політики конфіденційності.</p>
+    </footer>
+
+    <script src="../js/particles.js"></script>
+    <script src="../js/todo.js"></script>
+</body>
+</html>

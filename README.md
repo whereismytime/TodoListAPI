@@ -1,5 +1,5 @@
 ====================================
-       TODOLISTAPI – QUICK START GUIDE
+      TODOLISTAPI – QUICK START GUIDE
 ====================================
 
 1. OVERVIEW
@@ -10,11 +10,11 @@ cookies for secure authentication. The frontend (HTML/CSS/JS) features a sleek
 dark theme with minimal animations and a responsive layout.
 
 Key Features:
-  - Secure user registration and login.
-  - Manage tasks: add, edit, delete, mark as done.
-  - Sort tasks alphabetically (A–Z, Z–A).
-  - JWT stored in HttpOnly, Secure, SameSite=Strict cookies for security.
-  - Inline task editing with simple fade-in transitions.
+- Secure user registration and login.
+- Manage tasks: add, edit, delete, mark as done.
+- Sort tasks alphabetically (A–Z, Z–A).
+- JWT stored in HttpOnly, Secure, SameSite=Strict cookies for security.
+- Inline task editing with simple fade-in transitions.
 
 ====================================
 
@@ -39,21 +39,21 @@ Key Features:
 **Steps:**
 1) Clone the repository and open the solution.
 2) In `appsettings.json`, set:
-   - Database connection string (`DefaultConnection`)
-   - JWT secret key & expiration (`Jwt` section)
+- Database connection string (`DefaultConnection`)
+- JWT secret key & expiration (`Jwt` section)
 3) Run migrations:
-   ```
-   dotnet ef database update
-   ```
-   *(Creates/updates the database schema)*
+```
+dotnet ef database update
+```
+*(Creates/updates the database schema)*
 4) Launch the app:
-   ```
-   dotnet run
-   ```
-   *(or press "Run" in Visual Studio)*
+```
+dotnet run
+```
+*(or press "Run" in Visual Studio)*
 5) Access:
-   - **Main Site:** https://localhost:7202
-   - **Swagger UI:** https://localhost:7202/swagger
+- **Main Site:** https://localhost:7202
+- **Swagger UI:** https://localhost:7202/swagger
 
 ====================================
 
@@ -93,5 +93,5 @@ Key Features:
 - Additional security improvements.
 
 ====================================
-              END OF GUIDE
+            END OF GUIDE
 ====================================

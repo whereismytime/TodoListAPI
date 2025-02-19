@@ -34,20 +34,20 @@ Key Features:
 **Setup Steps:**  
 1. Clone the repository and open the solution.  
 2. Configure `appsettings.json`:  
-- Set the database connection string (`DefaultConnection`).  
-- Set the JWT secret key & expiration (`Jwt` section).  
+   - Set the database connection string (`DefaultConnection`).  
+   - Set the JWT secret key & expiration (`Jwt` section).  
 3. Run database migrations:  
-```sh
-dotnet ef database update
-```
+   ```sh
+   dotnet ef database update
+   ```
 4. Start the application:  
-```sh
-dotnet run
-```  
+   ```sh
+   dotnet run
+   ```  
 *(or press "Run" in Visual Studio)*  
 5. Access the application:  
-- **Main Site:** https://localhost:7202  
-- **Swagger UI:** https://localhost:7202/swagger  
+   - **Main Site:** https://localhost:7202  
+   - **Swagger UI:** https://localhost:7202/swagger  
 
 -----------------------
 4. **Project Structure**

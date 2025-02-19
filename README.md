@@ -1,7 +1,8 @@
 TodoListAPI – Quick Start Guide
 
-1. Overview
 -----------
+1. **Overview**
+
 TodoListAPI is a modern web application for task management.
 It features a secure authentication system using JWT stored in HttpOnly cookies,
 and a responsive frontend with a sleek dark theme.
@@ -13,16 +14,18 @@ Key Features:
 - Inline editing with real-time updates.
 - JWT stored in HttpOnly, Secure, SameSite=Strict cookies.
 
-2. Technologies Used
 --------------------
+2. **Technologies Used**
+
 - **Backend:** ASP.NET Core, Entity Framework Core, SQL Server.
 - **Authentication:** JWT (JSON Web Tokens).
 - **API Documentation:** Swagger.
 - **Frontend:** HTML, CSS, JavaScript.
 - **Enhancements:** SweetAlert2 (pop-up alerts), particles.js (animated backgrounds).
 
-3. Installation & Setup
 -----------------------
+3. **Installation & Setup**
+
 **Prerequisites:**  
 - .NET 8 SDK  
 - SQL Server (or SQL Express)  
@@ -46,8 +49,9 @@ dotnet run
 - **Main Site:** https://localhost:7202  
 - **Swagger UI:** https://localhost:7202/swagger  
 
-4. Project Structure
---------------------
+-----------------------
+4. **Project Structure**
+
 **Backend (ASP.NET Core):**  
 - `AuthController.cs` – Registration, login, profile, logout.  
 - `TodoController.cs` – CRUD operations for tasks.  
@@ -63,18 +67,23 @@ dotnet run
 - `js/` – JavaScript files (`index.js`, etc.).  
 - `img/` – Images (logo, demo GIFs, etc.).  
 
-5. Security Notes
------------------
+--------------------
+5. **Security Notes**
+
 - Passwords are hashed using HMACSHA512.  
 - JWT is stored in **HttpOnly, Secure, SameSite=Strict** cookies.  
 - API calls use `"credentials: 'include'"` to send cookies automatically.  
 - Basic client-side sanitization prevents simple XSS attacks.  
 
-6. Future Enhancements
-----------------------
+--------------------
+
+6. **Future Enhancements**
+
 - Task deadlines & priority levels.  
 - Dark/light mode toggle.  
 - Improved UI animations.  
 - Additional security optimizations.  
+
+----------------------
 
 End of Guide

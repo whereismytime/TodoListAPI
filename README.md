@@ -1,97 +1,80 @@
-====================================
-      TODOLISTAPI – QUICK START GUIDE
-====================================
+TodoListAPI – Quick Start Guide
 
-1. OVERVIEW
+1. Overview
 -----------
-TodoListAPI is a modern web application for managing tasks.
-It uses ASP.NET Core (with EF Core) on the backend, and stores JWT in HttpOnly
-cookies for secure authentication. The frontend (HTML/CSS/JS) features a sleek
-dark theme with minimal animations and a responsive layout.
+TodoListAPI is a modern web application for task management.
+It features a secure authentication system using JWT stored in HttpOnly cookies,
+and a responsive frontend with a sleek dark theme.
 
 Key Features:
 - Secure user registration and login.
-- Manage tasks: add, edit, delete, mark as done.
+- Manage tasks: add, edit, delete, mark as completed.
 - Sort tasks alphabetically (A–Z, Z–A).
-- JWT stored in HttpOnly, Secure, SameSite=Strict cookies for security.
-- Inline task editing with simple fade-in transitions.
+- Inline editing with real-time updates.
+- JWT stored in HttpOnly, Secure, SameSite=Strict cookies.
 
-====================================
-
-2. MAIN TECHNOLOGIES
+2. Technologies Used
 --------------------
-- ASP.NET Core, Entity Framework Core, SQL Server
-- JWT (JSON Web Tokens) for authentication
-- Swagger for API documentation
-- HTML, CSS, JavaScript for the frontend
-- SweetAlert2 for pop-up alerts
-- particles.js for animated backgrounds
+- **Backend:** ASP.NET Core, Entity Framework Core, SQL Server.
+- **Authentication:** JWT (JSON Web Tokens).
+- **API Documentation:** Swagger.
+- **Frontend:** HTML, CSS, JavaScript.
+- **Enhancements:** SweetAlert2 (pop-up alerts), particles.js (animated backgrounds).
 
-====================================
-
-3. INSTALLATION & SETUP
+3. Installation & Setup
 -----------------------
-**Prerequisites:**
-- .NET 8 SDK
-- SQL Server (or SQL Express)
-- Visual Studio or VS Code
+**Prerequisites:**  
+- .NET 8 SDK  
+- SQL Server (or SQL Express)  
+- Visual Studio or VS Code  
 
-**Steps:**
-1) Clone the repository and open the solution.
-2) In `appsettings.json`, set:
-- Database connection string (`DefaultConnection`)
-- JWT secret key & expiration (`Jwt` section)
-3) Run migrations:
-```
+**Setup Steps:**  
+1. Clone the repository and open the solution.  
+2. Configure `appsettings.json`:  
+- Set the database connection string (`DefaultConnection`).  
+- Set the JWT secret key & expiration (`Jwt` section).  
+3. Run database migrations:  
+```sh
 dotnet ef database update
 ```
-*(Creates/updates the database schema)*
-4) Launch the app:
-```
+4. Start the application:  
+```sh
 dotnet run
-```
-*(or press "Run" in Visual Studio)*
-5) Access:
-- **Main Site:** https://localhost:7202
-- **Swagger UI:** https://localhost:7202/swagger
+```  
+*(or press "Run" in Visual Studio)*  
+5. Access the application:  
+- **Main Site:** https://localhost:7202  
+- **Swagger UI:** https://localhost:7202/swagger  
 
-====================================
-
-4. PROJECT STRUCTURE
+4. Project Structure
 --------------------
-**Backend (ASP.NET Core):**
-- `AuthController.cs`     → Registration, login, profile, logout
-- `TodoController.cs`     → CRUD for tasks
-- `JwtService.cs`         → JWT generation & validation
-- `Program.cs`            → Configures services, EF Core, JWT, Swagger
-- `appsettings.json`      → Database connection & JWT settings
+**Backend (ASP.NET Core):**  
+- `AuthController.cs` – Registration, login, profile, logout.  
+- `TodoController.cs` – CRUD operations for tasks.  
+- `JwtService.cs` – JWT generation & validation.  
+- `Program.cs` – Configures services, EF Core, JWT, Swagger.  
+- `appsettings.json` – Database connection & JWT settings.  
 
-**Frontend (wwwroot/):**
-- `index.html`            → Landing page (dark theme, short demo)
-- `login.html / register.html` → Authentication pages
-- `todo.html`             → Task management (inline editing, sorting)
-- `css/`                  → Stylesheets (index.css, etc.)
-- `js/`                   → JavaScript files (index.js, etc.)
-- `img/`                  → Images (logo, demo GIFs, etc.)
+**Frontend (wwwroot/):**  
+- `index.html` – Landing page (dark theme, short demo).  
+- `login.html / register.html` – Authentication pages.  
+- `todo.html` – Task management (inline editing, sorting).  
+- `css/` – Stylesheets (`index.css`, etc.).  
+- `js/` – JavaScript files (`index.js`, etc.).  
+- `img/` – Images (logo, demo GIFs, etc.).  
 
-====================================
-
-5. SECURITY NOTES
+5. Security Notes
 -----------------
-- Passwords hashed via HMACSHA512.
-- JWT stored in **HttpOnly, Secure, SameSite=Strict** cookies.
-- `"credentials: 'include'"` used for API calls to send cookies automatically.
-- Basic client-side sanitization helps prevent XSS.
+- Passwords are hashed using HMACSHA512.  
+- JWT is stored in **HttpOnly, Secure, SameSite=Strict** cookies.  
+- API calls use `"credentials: 'include'"` to send cookies automatically.  
+- Basic client-side sanitization prevents simple XSS attacks.  
 
-====================================
-
-6. FUTURE ENHANCEMENTS
+6. Future Enhancements
 ----------------------
-- Task deadlines & priority levels.
-- Dark/light mode toggle.
-- Advanced UI animations.
-- Additional security improvements.
+- Task deadlines & priority levels.  
+- Dark/light mode toggle.  
+- Improved UI animations.  
+- Additional security optimizations.  
 
-====================================
-            END OF GUIDE
-====================================
+End of Guide

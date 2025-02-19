@@ -8,10 +8,10 @@ cookies for secure authentication. The frontend (HTML/CSS/JS) features a sleek
 dark theme with minimal animations and a responsive layout.
 
 Key Points:
-  • Users can register, log in, and manage tasks (add, edit, delete, mark as done).
-  • Tasks can be sorted alphabetically (A–Z, Z–A).
-  • JWT is stored in HttpOnly, Secure, SameSite=Strict cookies for extra security.
-  • Inline editing for tasks, plus simple fade-in transitions.
+• Users can register, log in, and manage tasks (add, edit, delete, mark as done).
+• Tasks can be sorted alphabetically (A–Z, Z–A).
+• JWT is stored in HttpOnly, Secure, SameSite=Strict cookies for extra security.
+• Inline editing for tasks, plus simple fade-in transitions.
 
 2. MAIN TECHNOLOGIES
 --------------------
@@ -25,9 +25,9 @@ Key Points:
 3. INSTALLATION & SETUP
 -----------------------
 Prerequisites:
-  • .NET 8 SDK
-  • SQL Server (or SQL Express)
-  • Visual Studio or VS Code
+• .NET 8 SDK
+• SQL Server (or SQL Express)
+• Visual Studio or VS Code
 
 Steps:
 1) Clone the repository and open the solution.
@@ -47,19 +47,19 @@ Steps:
 4. PROJECT STRUCTURE
 --------------------
 Backend (ASP.NET Core):
-  • AuthController.cs     : Registration, login, profile, logout
-  • TodoController.cs     : CRUD for tasks
-  • JwtService.cs         : JWT generation & validation
-  • Program.cs            : Configures services, EF Core, JWT, Swagger
-  • appsettings.json      : DB connection & JWT settings
+• AuthController.cs     : Registration, login, profile, logout
+• TodoController.cs     : CRUD for tasks
+• JwtService.cs         : JWT generation & validation
+• Program.cs            : Configures services, EF Core, JWT, Swagger
+• appsettings.json      : DB connection & JWT settings
 
 Frontend (in wwwroot/):
-  • index.html            : Landing page (dark theme, short demo)
-  • login.html/register.html : Authentication pages
-  • todo.html             : Task management (inline editing, sorting)
-  • css/ (index.css, etc.)
-  • js/  (index.js, etc.)
-  • img/ (logo, demo GIFs, etc.)
+• index.html            : Landing page (dark theme, short demo)
+• login.html/register.html : Authentication pages
+• todo.html             : Task management (inline editing, sorting)
+• css/ (index.css, etc.)
+• js/  (index.js, etc.)
+• img/ (logo, demo GIFs, etc.)
 
 5. SECURITY NOTES
 ----------------

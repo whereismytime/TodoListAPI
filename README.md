@@ -1,94 +1,78 @@
-TodoListAPI – Quick Start Guide
-----------------------------------------------------------------
+TODOLISTAPI – QUICK START GUIDE
 
 1. OVERVIEW
-------------
-TodoListAPI is a concise, modern web application for task management.
-It uses ASP.NET Core (with EF Core) on the backend and stores JWT in HttpOnly cookies
-for secure authentication. The frontend is built with HTML, CSS, and JavaScript,
-featuring a sleek dark theme with smooth animations and responsive design.
+-----------
+TodoListAPI is a concise, modern web application for managing tasks.
+It uses ASP.NET Core (with EF Core) on the backend, and stores JWT in HttpOnly
+cookies for secure authentication. The frontend (HTML/CSS/JS) features a sleek
+dark theme with minimal animations and a responsive layout.
 
-Key Features:
-  • Secure user registration and login.
-  • Manage tasks: add, edit, delete, and mark as completed.
-  • Sort tasks alphabetically (A–Z and Z–A).
-  • Inline editing with real-time updates.
-  • JWT stored in HttpOnly, Secure, SameSite=Strict cookies for enhanced security.
-
-----------------------------------------------------------------
+Key Points:
+  • Users can register, log in, and manage tasks (add, edit, delete, mark as done).
+  • Tasks can be sorted alphabetically (A–Z, Z–A).
+  • JWT is stored in HttpOnly, Secure, SameSite=Strict cookies for extra security.
+  • Inline editing for tasks, plus simple fade-in transitions.
 
 2. MAIN TECHNOLOGIES
----------------------
+--------------------
 • ASP.NET Core, Entity Framework Core, SQL Server
-• JWT (JSON Web Tokens) for authentication
-• Swagger for API documentation
+• JWT (JSON Web Tokens) for auth
+• Swagger for API docs
 • HTML, CSS, JavaScript for the frontend
-• SweetAlert2 for attractive popup notifications
-• particles.js for animated background effects
-
-----------------------------------------------------------------
+• SweetAlert2 for pop-up alerts
+• particles.js for animated backgrounds
 
 3. INSTALLATION & SETUP
-------------------------
+-----------------------
 Prerequisites:
   • .NET 8 SDK
   • SQL Server (or SQL Express)
   • Visual Studio or VS Code
 
 Steps:
-  1. Clone the repository and open the solution.
-  2. Configure appsettings.json:
-       - Set the database connection string ("DefaultConnection").
-       - Set the JWT secret key and token expiration in the "Jwt" section.
-  3. Run database migrations:
-       dotnet ef database update
-     (This creates or updates the database schema.)
-  4. Start the project:
-       dotnet run
-     or open the solution in Visual Studio and click "Run".
-  5. Access the application at:
-       Main Site: https://localhost:7202
-       Swagger UI: https://localhost:7202/swagger
-
-----------------------------------------------------------------
+1) Clone the repository and open the solution.
+2) In appsettings.json, set:
+   - Database connection string ("DefaultConnection")
+   - JWT secret key & expiration ("Jwt" section)
+3) Run migrations:
+   dotnet ef database update
+   (Creates/updates the database schema)
+4) Launch the app:
+   dotnet run
+   or press "Run" in Visual Studio
+5) Access:
+   - Main Site: https://localhost:7202
+   - Swagger UI: https://localhost:7202/swagger
 
 4. PROJECT STRUCTURE
----------------------
-Backend (ASP.NET Core API):
-  - AuthController.cs      : Handles registration, login, profile retrieval, and logout.
-  - TodoController.cs      : Provides CRUD operations for managing tasks.
-  - JwtService.cs          : Generates and validates JWT tokens.
-  - Program.cs             : Configures services, authentication (extracting JWT from cookies),
-                             EF Core, and Swagger.
-  - appsettings.json       : Stores database connection string and JWT settings.
+--------------------
+Backend (ASP.NET Core):
+  • AuthController.cs     : Registration, login, profile, logout
+  • TodoController.cs     : CRUD for tasks
+  • JwtService.cs         : JWT generation & validation
+  • Program.cs            : Configures services, EF Core, JWT, Swagger
+  • appsettings.json      : DB connection & JWT settings
 
-Frontend (located in wwwroot/):
-  - index.html             : Landing page with animations, a GIF demonstration, and sections (About, Features, Team, FAQ, Contacts).
-  - login.html / register.html
-                           : Pages for user authentication.
-  - todo.html              : Personal task management interface with inline editing and sorting.
-  - CSS Files              : index.css, login.css, register.css, todo.css (unified dark theme).
-  - JavaScript Files       : index.js, login.js, register.js, todo.js (dynamic interactions and API calls).
-  - Image Assets           : Located in the "img" folder (logo, demo GIFs, etc.).
-
-----------------------------------------------------------------
+Frontend (in wwwroot/):
+  • index.html            : Landing page (dark theme, short demo)
+  • login.html/register.html : Authentication pages
+  • todo.html             : Task management (inline editing, sorting)
+  • css/ (index.css, etc.)
+  • js/  (index.js, etc.)
+  • img/ (logo, demo GIFs, etc.)
 
 5. SECURITY NOTES
-------------------
-• Passwords are hashed using HMACSHA512.
-• JWT is stored in HttpOnly, Secure, SameSite=Strict cookies to protect against XSS and CSRF.
-• API requests are sent with "credentials: 'include'" to automatically include cookies.
-• Basic client-side input sanitization helps prevent simple XSS injections (additional server-side validation is recommended).
-
-----------------------------------------------------------------
+----------------
+• Passwords hashed via HMACSHA512
+• JWT stored in HttpOnly, Secure, SameSite=Strict cookies
+• "credentials: 'include'" for API calls, sending cookies automatically
+• Basic client-side sanitization to reduce XSS
 
 6. FUTURE ENHANCEMENTS
------------------------
-• Adding task deadlines and priority levels.
-• Implementing a dark/light mode toggle.
-• Enhancing the UI with more advanced animations.
-• Further security and performance optimizations.
+----------------------
+• Task deadlines & priority
+• Dark/light mode toggle
+• Advanced UI animations
+• Additional security improvements
 
-----------------------------------------------------------------
-End of Guide
-----------------------------------------------------------------
+END OF GUIDE

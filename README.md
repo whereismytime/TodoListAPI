@@ -1,45 +1,49 @@
 ============================================================
-🚀 TodoListAPI – Project Guide
+# 🚀 TodoListAPI – Project Guide
 ============================================================
 
 Overview:
 ---------
 TodoListAPI is a modern web application designed for efficient task management.
-It provides a secure user authentication system with JWT-based cookies and a fully
-responsive frontend with a sleek dark theme.
+It provides a secure user authentication system with JWT-based cookies and
+a fully responsive frontend with a sleek dark theme.
 
 With this project, users can:
-✅ Register and log in securely  
-✅ Manage their tasks (Add, Edit, Delete, Mark as completed)  
-✅ Sort tasks alphabetically (A–Z, Z–A)  
-✅ Enjoy a smooth UI with animations & real-time interactions  
+- Register and log in securely
+- Manage tasks (Add, Edit, Delete, Mark as completed)
+- Sort tasks alphabetically (A–Z, Z–A)
+- Enjoy a smooth UI with animations & real-time interactions
 
-🛠 Built with:  
-ASP.NET Core | Entity Framework Core | SQL Server | JWT | Swagger |  
-HTML | CSS | JavaScript | SweetAlert2 | Particles.js  
+Built with:
+- ASP.NET Core
+- Entity Framework Core
+- SQL Server
+- JWT
+- Swagger
+- HTML | CSS | JavaScript | SweetAlert2 | Particles.js
 
 ============================================================
-📂 Project Structure
+Project Structure
 ============================================================
 
 Backend (ASP.NET Core API):
 --------------------------------
 • AuthController.cs – Manages user registration, login, profile retrieval, and logout.
-• TodoController.cs – Provides CRUD operations for managing tasks.
+• TodoController.cs – Provides CRUD operations for task management.
 • JwtService.cs – Generates and validates JWT tokens.
 • Program.cs – Configures services, authentication (extracting JWT from cookies), EF Core connection, and Swagger.
-• appsettings.json – Stores the database connection string and JWT settings.
+• appsettings.json – Stores the database connection string & JWT settings.
 
 Frontend (HTML, CSS, JavaScript):
 ------------------------------------
-• index.html – The landing page with animations, a GIF demonstration, and sections such as About, Features, Team, FAQ, and Contacts.
+• index.html – Main landing page with animations, a GIF demonstration, and multiple sections (About, Features, Team, FAQ, Contacts).
 • login.html / register.html – Pages for user authentication and registration.
-• todo.html – Personal task management interface with inline editing.
-• CSS files (index.css, login.css, register.css, todo.css) – Provide a unified dark theme.
-• JavaScript files (index.js, login.js, register.js, todo.js) – Handle dynamic interactions, inline editing, sorting, etc.
+• todo.html – Personal task management interface (inline editing, sorting, etc.).
+• CSS files (index.css, login.css, register.css, todo.css) – Unified dark theme styling.
+• JavaScript files (index.js, login.js, register.js, todo.js) – Dynamic interactions, inline editing, sorting, and API calls.
 
 ============================================================
-⚙️ Technologies & Dependencies
+Technologies & Dependencies
 ============================================================
 
 Backend (NuGet Packages):
@@ -66,57 +70,58 @@ Additional Tools:
 • SQL Server (or SQL Express) – As the database server.
 
 ============================================================
-📖 API Documentation (Swagger)
+API Documentation (Swagger)
 ============================================================
 • API documentation is available at: https://localhost:7202/swagger
-• Use Swagger UI to test the API endpoints interactively.
+• Use Swagger UI to test API endpoints interactively.
 
 ============================================================
-🚀 Setup & Installation
+Setup & Installation
 ============================================================
-1. Prerequisites:
+
+1️⃣ Prerequisites:
    • .NET 8 SDK
    • SQL Server (or SQL Express)
    • Visual Studio or VS Code
 
-2. Configuration:
+2️⃣ Configure the App:
    • Open appsettings.json and set:
-     - The ConnectionString for the database.
-     - JWT secret key and token expiration settings under the Jwt section.
+     - Connection string for the database
+     - JWT secret key & token expiration settings under the Jwt section
 
-3. Database Migration:
-   • Run the following command in the terminal:
+3️⃣ Run Database Migrations:
+   • Execute the following command in the terminal:
        dotnet ef database update
    This creates or updates the database schema.
 
-4. Running the Project:
+4️⃣ Start the Application:
    • Start the project using:
        dotnet run
    or open the solution in Visual Studio and click Run.
-   • The application will be available at https://localhost:7202
+   The application will be available at https://localhost:7202
 
-5. Accessing the Application:
+5️⃣ Accessing the Application:
    • Swagger UI: https://localhost:7202/swagger
    • Main Site: https://localhost:7202
    • Use the links on the site to navigate to the Login, Registration, and Todo pages.
 
 ============================================================
-🔑 Security Considerations
+Authentication & Security
 ============================================================
 • JWT is stored in HttpOnly cookies to protect against XSS.
 • Passwords are hashed using HMACSHA512.
 • Cookies are configured with Secure and SameSite=Strict attributes to mitigate CSRF risks.
-• Additional client-side validation prevents simple XSS injections (additional server-side validation is recommended).
+• Additional client-side validation prevents simple XSS injections.
 
 ============================================================
-🛡 Cookies & Sessions
+Cookies & Sessions
 ============================================================
 • Upon successful login, the server sets the JWT in an HttpOnly, Secure, and SameSite=Strict cookie.
 • API requests are sent with "credentials: 'include'" to automatically transmit the cookie.
-• The JwtBearer configuration in Program.cs uses the OnMessageReceived event to extract the token from cookies when the Authorization header is absent.
+• The JwtBearer configuration in Program.cs uses the OnMessageReceived event to extract the token from cookies if the Authorization header is absent.
 
 ============================================================
-🛠 Technologies Used
+Technologies Used
 ============================================================
 • ASP.NET Core – For building the web application and REST API.
 • Entity Framework Core 8.0 – For data access with SQL Server.
@@ -127,7 +132,7 @@ Additional Tools:
 • SweetAlert2 – For attractive popup notifications.
 
 ============================================================
-📂 Folder & File Structure
+Folder & File Structure
 ============================================================
 TodoListAPI/
 ├── Controllers/
@@ -160,7 +165,7 @@ TodoListAPI/
 └── Startup.cs                    - (if used) additional configuration.
 
 ============================================================
-🎯 Future Improvements
+Future Improvements
 ============================================================
 • Adding task deadlines & priority levels.
 • Implementing a dark/light mode toggle.
